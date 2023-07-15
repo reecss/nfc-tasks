@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const NFCScanner = () => {
+const NFCReader = () => {
     let ndef;
     const decoder = new TextDecoder();
     const [scanning, setScanning] = useState(false);
@@ -45,7 +45,7 @@ const NFCScanner = () => {
     
     if (!ndef) {
         return (
-            <p>Your browser does not support NFC. Please reload this page on a
+            <p>Your browser does not have NFC functionality. Please reload this page on a
             device that does. For nerd info on browser support, click <a
             href="https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API#browser_compatibility"
             target="_blank">here</a>.</p>
@@ -64,4 +64,4 @@ const NFCScanner = () => {
     }
 }
 
-export default NFCScanner;
+export default NFCReader;
